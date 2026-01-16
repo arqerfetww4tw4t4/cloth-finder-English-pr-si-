@@ -7,7 +7,7 @@ import streamlit as st
 import requests
 
 # -------------------- KONFIG --------------------
-SERPAPI_KEY = "arqerfetww4tw4t4"  # später ersetzen
+SERPAPI_KEY = "d0830ba352bf8acfc0015f156b901df5666478acddc71b4865e10e127290900a"  # später ersetzen
 # ------------------------------------------------
 
 st.set_page_config(page_title="Klamotten Preisfinder", page_icon="🛒")
