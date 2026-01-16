@@ -64,6 +64,10 @@ if st.button("Günstigsten Preis suchen"):
                     st.success("Günstigstes Angebot gefunden!")
                     st.write(f"**Produkt:** {cheapest['title']}")
                     st.write(f"**Preis:** {cheapest['price']} €")
-                    st.markdown(f"[Zum Shop]({cheapest['link']})")
+                    # Direkter Google-Suchlink für günstige Nike-Angebote
+search_name = cheapest['title'].replace(' ', '+')
+google_link = f"https://www.google.com/search?q={search_name}+Nike+billig"
+st.markdown(f"[Zum Shop]({google_link})", unsafe_allow_html=True)
+
                 else:
                     st.error("Preise konnten nicht gelesen werden.")
