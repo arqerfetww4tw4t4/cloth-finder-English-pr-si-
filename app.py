@@ -7,7 +7,7 @@ import streamlit as st
 import requests
 
 # -------------------- KONFIG --------------------
-SERPAPI_KEY = "d0830ba352bf8acfc0015f156b901df5666478acddc71b4865e10e127290900a"  # später ersetzen
+SERPAPI_KEY = "d0830ba352bf8acfc0015f156b901df5666478acddc71b4865e10e127290900a"
 # ------------------------------------------------
 
 st.set_page_config(page_title="Klamotten Preisfinder", page_icon="🛒")
@@ -64,10 +64,10 @@ if st.button("Günstigsten Preis suchen"):
                     st.success("Günstigstes Angebot gefunden!")
                     st.write(f"**Produkt:** {cheapest['title']}")
                     st.write(f"**Preis:** {cheapest['price']} €")
-                    # Direkter Google-Suchlink für günstige Nike-Angebote
-search_name = cheapest['title'].replace(' ', '+')
-google_link = f"https://www.google.com/search?q={search_name}+Nike+billig"
-st.markdown(f"[Zum Shop]({google_link})", unsafe_allow_html=True)
-
+                    
+                    # Google Link richtig einrücken und funktionierend
+                    search_name = cheapest['title'].replace(' ', '+')
+                    google_link = f"https://www.google.com/search?q={search_name}+Nike+billig"
+                    st.markdown(f"[Zum Shop]({google_link})", unsafe_allow_html=True)
                 else:
                     st.error("Preise konnten nicht gelesen werden.")
